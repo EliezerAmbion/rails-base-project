@@ -5,7 +5,7 @@ class BrokerStocksController < ApplicationController
     if broker_signed_in?
       @broker_stocks = current_broker.broker_stocks.order(created_at: :desc)
     elsif buyer_signed_in?
-      @available_stocks = BrokerStock.all
+      @available_stocks = BrokerStock.search(params[:q])
     end
   end
 
