@@ -1,8 +1,14 @@
 <section class="wrapper-body">
-
   <div class="wrapper-grid">
-
     <article class="left">
+    
+      <div class="logo-container">
+        <div class="logo">
+          <i class='bx bxs-coin-stack'></i>
+          <h1>stockpile</h1>
+        </div>
+      </div>
+
       <% if current_page?(new_buyer_registration_path) %>
 
         <div>
@@ -31,6 +37,22 @@
         <div class="become-a-broker__left">
           <%= link_to 'Login as Buyer', buyer_session_path, class:"become-a-broker__left-link-to"%>
         </div>
+
+      <% else %>
+
+        <div>
+          <h3>Already a member?</h3>
+          <p>If you are a member, <br> please log in.</p>
+        </div>
+
+        <div class="login-btn__left">
+          <%= render "devise/shared/links" %>
+        </div>
+
+        <div class="become-a-broker__left">
+          <%= link_to 'Become a Broker', new_broker_registration_path, class:"become-a-broker__left-link-to"%>
+        </div>
+
 
       <% end %>
 

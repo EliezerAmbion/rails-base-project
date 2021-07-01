@@ -20,7 +20,10 @@
     height: 30%;
     @include flexCenter(column, flex-start);
     justify-content: space-evenly;
-    color: var(--clr-accent-lighter);
+
+    .list a {
+      color: var(--clr-accent-lighter);
+    }
 
     .user_profile {
       position: absolute;

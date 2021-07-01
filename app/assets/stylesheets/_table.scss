@@ -16,7 +16,7 @@
   .content-table {
     border-collapse: collapse;
     margin: 1em 0;
-    min-width: 800px;
+    min-width: 900px;
     box-shadow: var(--bs);
 
     thead {
@@ -48,9 +48,6 @@
         &:last-of-type {
           border-bottom: 2px solid var(--clr-accent-darker);
         }
-      }
-      a {
-        color: var(--clr-accent-dark);
       }
       td {
         font-size: var(--fs-label);
@@ -116,4 +113,14 @@
       }
     }
   }
+}
+
+.button {
+  cursor: pointer;
+  background: var(--clr-accent-dark);
+  border: none;
+  outline: none;
+  padding: 0.5em 2em;
+  border-radius: 0.4rem;
+  color: var(--clr-light);
 }

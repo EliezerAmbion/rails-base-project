@@ -16,6 +16,8 @@
   --clr-accent-dark: #01627f;
   --clr-accent-darker: #003c57;
 
+  --clr-accent-card: aliceblue;
+
   --h-form: 320px;
   --p-form: 1.8em;
   --w-form: 38rem;
@@ -78,20 +80,6 @@ body {
   height: 100vh;
   font-family: mont;
   background-repeat: no-repeat;
-}
-
-a {
-  color: var(--clr-accent);
-}
-
-.button {
-  cursor: pointer;
-  background: var(--clr-accent-dark);
-  border: none;
-  outline: none;
-  padding: 0.5em 2em;
-  border-radius: 0.4rem;
-  color: var(--clr-light);
 }
 
 @mixin flexCenter($direction, $align-items) {
