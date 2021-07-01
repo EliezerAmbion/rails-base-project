@@ -3,7 +3,7 @@ class CreateBrokerStocks < ActiveRecord::Migration[6.0]
     create_table :broker_stocks do |t|
       t.references :broker
       t.string :symbol
-      t.integer :price
+      t.string :image
       t.string :company_name
       t.timestamps
     end

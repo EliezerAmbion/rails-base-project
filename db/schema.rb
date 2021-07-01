@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_06_25_135820) do
   create_table "broker_stocks", force: :cascade do |t|
     t.bigint "broker_id"
     t.string "symbol"
-    t.integer "price"
+    t.string "image"
     t.string "company_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_06_25_135820) do
     t.string "symbol"
     t.integer "quantity", default: 1
     t.string "company_name"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["buyer_id"], name: "index_buyer_stocks_on_buyer_id"
@@ -45,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_06_25_135820) do
 
   create_table "stocks", force: :cascade do |t|
     t.string "symbol"
-    t.integer "price"
+    t.string "image"
     t.string "company_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -14,10 +14,11 @@ client = IEX::Api::Client.new(
 )
 symbols = client.ref_data_symbols()
 
-symbols.shuffle.slice(0,20).each do |symbol|
+symbols.shuffle.slice(0,30).each do |symbol|
     quote = client.quote(symbol.symbol)
     company = client.company(symbol.symbol)
+    logo = client.logo(symbol.symbol)
 
-    Stock.create(symbol: symbol.symbol, price: quote.latest_price, company_name: company.company_name)
+    Stock.create(symbol: symbol.symbol, image: logo.url, company_name: company.company_name)
 end
 
