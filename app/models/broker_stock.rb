@@ -4,4 +4,12 @@ class BrokerStock < ApplicationRecord
   has_many :buyers, through: :user_transactions
   validates :symbol, presence: true
   validates :company_name, presence: true
+
+  def self.search(search)
+    if search
+      where(['company_name LIKE ?', "%#{search}%"])
+    else
+      all
+    end
+  end
 end
