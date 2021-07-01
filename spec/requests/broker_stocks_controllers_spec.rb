@@ -27,8 +27,8 @@ RSpec.describe 'BrokerStocksController', type: :request do
 
   context 'with POST /broker_stocks' do
     it 'creates broker stocks' do
-      post broker_stocks_path(broker), params: { broker_stock: { symbol: 'A', price: 200, company_name: 'Agilent' } }
-      expect(response).to redirect_to(broker_stocks_path)
+      post broker_stocks_path(broker), params: { broker_stock: { symbol: 'A', company_name: 'Agilent' } }
+      expect(response).to redirect_to(new_broker_stock_path)
     end
   end
 end

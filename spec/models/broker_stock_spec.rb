@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BrokerStock, type: :model do
   let!(:broker) { Broker.create(email: 'e@email.com', password: 'password', password_confirmation: 'password') }
-  let(:broker_stock) { broker.broker_stocks.build(symbol: 'MC', price: 260.76, company_name: 'Microsoft Corp') }
+  let(:broker_stock) { broker.broker_stocks.build(symbol: 'MC', company_name: 'Microsoft Corp') }
 
   context 'with validations/stock should fail to save' do
     it 'is not valid without symbol' do

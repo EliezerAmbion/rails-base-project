@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Stock, type: :model do
-  let!(:stock) { described_class.create(symbol: 'MC', price: 260.76, company_name: 'Microsoft Corp') }
+  let!(:stock) { described_class.create(symbol: 'MC', company_name: 'Microsoft Corp') }
 
   context 'with validations/stock should fail to save' do
     it 'is not valid without symbol' do
