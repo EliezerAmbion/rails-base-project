@@ -17,7 +17,7 @@
           <td><%= stock.symbol%></td>
           <td><%= stock.company_name%></td>
           <td><%= stock.quantity%></td>
-          <td><%= link_to 'Show', buyer_stock_path(stock)%></td>
+          <td style="color: white"><%= link_to 'Show', buyer_stock_path(stock), class:"button" %></td>
         </tr>
       <%end%>
     </tbody>

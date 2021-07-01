@@ -27,13 +27,13 @@
           
         <div class="bottom">
           <div class="quantity">
-            <%= f.label :quantity %>
+            <%= f.label :quantity %>:
             <%= f.number_field :quantity, value: 1, id: :quantity%>
-            <p class="btn-confirm" id="confirm-quantity ">Confirm</p>
+            <p class="btn-confirm" id= confirm-quantity >Confirm</p>
           </div>
 
           <div class="total">
-            <%= f.label :total %>
+            <%= f.label :total %>:
             <%= f.number_field :total_price, step: :any, id: :total_price, class:'total_input' %>
             <%= f.submit 'Buy', class:"buy" %>
           </div>

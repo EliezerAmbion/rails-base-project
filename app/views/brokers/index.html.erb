@@ -19,7 +19,7 @@
           <td><%= broker.first_name%></td>
           <td><%= broker.last_name%></td>
           <td><%= broker.username%></td>
-          <td><%= button_to "Approve", admin_broker_path(current_admin, broker), params: { broker:{ approved: true }}, method: :patch%></td>
+          <td><%= button_to "Approve", admin_broker_path(current_admin, broker), params: { broker:{ approved: true }}, method: :patch, class:"approve"%></td>
         </tr>
       <%end%>
     </tbody>

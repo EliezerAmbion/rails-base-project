@@ -7,12 +7,14 @@
   color: var(--clr-accent-darker);
 
   .card-wrapper {
+    margin-left: 10rem;
     position: relative;
     border-radius: 0.4rem;
     box-shadow: var(--bs);
     height: var(--h-form);
     padding: var(--p-form);
-    min-width: 35rem;
+    min-width: 50rem;
+    background-color: var(--clr-accent-card);
 
     .top {
       margin-bottom: 4em;
@@ -20,6 +22,10 @@
       .name_and_symbol {
         text-align: center;
         border-bottom: 1px solid var(--clr-accent-darker);
+
+        h2 {
+          font-size: var(--fs-h2);
+        }
       }
     }
 
@@ -29,6 +35,7 @@
       justify-content: space-around;
 
       h2 {
+        font-size: var(--fs-h2);
         color: var(--clr-accent-darker);
       }
 
@@ -41,54 +48,83 @@
 
     .bottom {
       @include flexCenter(column, center);
+      justify-content: center;
 
       .quantity {
         @include flexCenter(row, center);
+        justify-content: center;
 
         label {
           font-size: var(--fs-h3);
+          color: var(--clr-accent-dark);
         }
 
         input {
           outline: none;
-          margin: 0 0.2em 0 1em;
+          margin: 0 0.2em 0 0.2em;
           padding: 0.2em 0 0 0.2em;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
 
         .btn-confirm {
           background-color: var(--clr-accent-darker);
           color: var(--clr-light);
+          padding: 0.35em 1em;
+          border-radius: 0.2rem;
+          cursor: pointer;
+        }
+      }
+
+      .total {
+        @include flexCenter(row, center);
+        justify-content: center;
+        position: absolute;
+        bottom: 3em;
+
+        label {
+          font-size: var(--fs-h3);
+          color: var(--clr-accent-dark);
+        }
+
+        .total_input {
+          border: none;
+          outline: none;
+          pointer-events: none;
+          color: var(--clr-accent-darker);
+          font-size: var(--fs-h2);
+          width: 20rem;
+          padding-left: 2rem;
+          background-color: var(--clr-accent-card);
+        }
+
+        .buy {
+          background-color: var(--clr-accent-darker);
+          color: var(--clr-light);
           padding: 0.5em 1em;
           border-radius: 0.2rem;
+          border: none;
           cursor: pointer;
         }
       }
     }
 
-    .total {
+    .bottom-card-buyer {
       position: absolute;
       bottom: 3em;
-      right: 5em;
 
-      label {
-        font-size: var(--fs-h3);
-      }
+      .quantity__bottom-card-buyer {
+        @include flexCenter(row, center);
+        margin: 1em 0;
 
-      .total_input {
-        border: none;
-        outline: none;
-        pointer-events: none;
-        border-bottom: 1px solid var(--clr-accent-darker);
-      }
+        h3 {
+          font-size: var(--fs-h3);
+          margin-right: 2rem;
+          color: var(--clr-accent-dark);
+        }
 
-      .buy {
-        background-color: var(--clr-accent-darker);
-        color: var(--clr-light);
-        padding: 0.5em 1em;
-        border-radius: 0.2rem;
-        border: none;
-        cursor: pointer;
+        h2 {
+          font-size: var(--fs-h2);
+        }
       }
     }
   }

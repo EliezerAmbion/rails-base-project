@@ -1,11 +1,7 @@
-
-
 <section class="wrapper-body">
-  
-
   <div class="wrapper-grid">
-
     <article class="left">
+    
       <div class="logo-container">
         <div class="logo">
           <i class='bx bxs-coin-stack'></i>
@@ -36,6 +32,21 @@
 
         <div class="login-as-buyer__left">
           <%= link_to 'Login as Buyer', buyer_session_path, class:"login-as-buyer__left-link_to"%>
+        </div>
+
+<%# the else block is for failed login %>
+      <% else %>
+        <div>
+          <h3>New here?</h3>
+          <p>Sign up now and be <br><span>a member!</span></p>
+        </div>
+
+        <div class="signup-btn__left">
+          <%= link_to 'Sign up', new_buyer_registration_path, class:"signup-btn__left__linkto"%>
+        </div>
+
+        <div class="become-a-broker__left">
+          <%= link_to 'Become a Broker', new_broker_registration_path, class:"become-a-broker__left-link-to"%>
         </div>
 
       <% end %>

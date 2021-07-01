@@ -1,10 +1,39 @@
-<section>
-  <div>
-   <h2><%= @buyer_stock.symbol%></h2>
-    <h2><%= @quote.change_percent_s%></h2>
-    <h2>Company Name<%= @buyer_stock.company_name%></h2>
-     <h2 id = 'latest_price' data-price = "<%= @quote.latest_price%>" > Latest Price: <%= @quote.latest_price%></h2>
-    <h2> Quantity: <%= @buyer_stock.quantity%></h2>
-    <h2> Total Amount: <%= @quote.latest_price * @buyer_stock.quantity%></h2>
+<section class="card">
+  <div class="card-wrapper">
+    <div class='top'>
+      <div class='name_and_symbol'>
+        <h2><%= @buyer_stock.company_name%></h2>
+        <em><%= @buyer_stock.symbol%></em>
+      </div>
+    </div>
+
+    <div class="middle">
+
+      <div class="change">
+        <h2><%= @quote.change_percent_s%></h2>
+        <em>Change</em>
+      </div>
+
+      <div class="price">
+        <h2 id = 'latest_price' data-price = "<%= @quote.latest_price%>" ><%= @quote.latest_price%></h2>
+        <em>Latest Price</em>
+      </div>
+    </div>
+
+    <div class="bottom-card-buyer">
+
+      <div class="quantity__bottom-card-buyer">
+        <h3> Quantity: </h3>
+        <h2><%= @buyer_stock.quantity%></h2>
+      </div>
+
+      <div class="quantity__bottom-card-buyer">
+        <h3> Total Amount: </h3>
+        <h2><%= @quote.latest_price * @buyer_stock.quantity%></h2>
+      </div>
+      
+    </div>
+
+
   </div>
 </section>
