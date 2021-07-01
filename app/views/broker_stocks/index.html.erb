@@ -8,6 +8,14 @@
       <Caption>Portfolio</Caption>
     <%elsif buyer_signed_in?%>
       <Caption>Stocks</Caption>
+
+      <div class = search-bar>
+        <%= form_tag(broker_stocks_path, role: "search", method: "get") do%>
+          <%= text_field_tag(:q)%>
+          <%= submit_tag('Search')%>
+        <%end%>
+      </div>
+
     <%end%>
 
     <thead>

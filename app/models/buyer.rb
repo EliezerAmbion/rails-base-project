@@ -1,4 +1,5 @@
 class Buyer < User
+  devise :confirmable
   has_many :buyer_stocks, dependent: :destroy
   has_many :user_transactions, dependent: :destroy
   has_many :broker_stocks, through: :user_transactions

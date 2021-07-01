@@ -5,6 +5,7 @@ class CreateBuyerStocks < ActiveRecord::Migration[6.0]
       t.string :symbol
       t.integer :quantity, default: 1
       t.string :company_name
+      t.string :image
       t.timestamps
     end
   end

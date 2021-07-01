@@ -2,7 +2,7 @@ class BuyerStocksController < ApplicationController
   before_action :authenticate_buyer!, exept: :show
 
   def index
-    @buyer_stocks = current_buyer.buyer_stocks.order(:symbol)
+    @buyer_stocks = current_buyer.buyer_stocks.order(updated_at: :desc)
   end
 
   def show
