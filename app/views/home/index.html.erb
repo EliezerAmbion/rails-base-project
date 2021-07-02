@@ -1,5 +1,59 @@
 <div class="root-container">
-  <section class ="top-section">
-    <h2>Welcome <%= @user.username.upcase%>!</h2>
+
+  <section class="top-section">
+    <h1>
+      Hello there, <strong><%= @user.username.upcase%>!</strong>
+    </h1>
+
+    <h2>We are excited to welcome you on board with us!</h2>
+
+    <h2>Feel free to use stockpile!</h2>
+
+    <h3 class="want-to-know-more">Want to know more about stockpile?</h3>
+
+    <a href="#middle" class="button">Know more</a>
+  </section>
+
+  <section class="middle-section" id="middle">
+
+    <h2>What is Stockpile</h2>
+
+    <div class="middle-section-container">
+      <div class="middle-content">
+        <h3>Stock</h3>
+        <p>
+          A stock (also known as equity) is a security that represents the ownership of a fraction of a corporation. This entitles the owner of the stock to a proportion of the corporation's assets and profits equal to how much stock they own. Units of stock are called "shares." Stocks are bought and sold predominantly on stock exchanges, though there can be private sales as well, and are the foundation of many individual investors' portfolios.
+        </p>
+      </div>
+
+      <div class="middle-content">
+        <h3>Stockpile</h3>
+        <p>
+          A large accumulated stock of goods or materials, especially one held in reserve for use at a time of shortage or other emergency. This application aims to make investing easy for user. This application is accessible and less intimidating compare to other stock applications.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bottom-section">
+    <h2>Developers</h2>
+
+    <div class="developers">
+
+      <div class="dev">
+        <h3>Eliezer Ambion</h3>
+        <h5><em> eliezerambion@gmail.com</em></h5>
+        <a href="https://github.com/EliezerAmbion"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/eliezer-ambion/"><i class='bx bxl-linkedin-square'></i></a>
+      </div>
+
+      <div class="dev">
+        <h3>Leif Bersamina</h3>
+        <h5><em> leifbersamina@gmail.com</em></h5>
+        <a href="https://github.com/TheEyePatch "><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/leif-bersamina/ "><i class='bx bxl-linkedin-square'></i></a>
+      </div>
+    </div>
   </section>
 </div>

@@ -2,9 +2,11 @@
   <div class="create-wrapper">
 
     <%= form_with scope: :broker,  url: admin_broker_path(current_admin, @broker), method: :patch, local: true do |f|%>
-    <% flash.each do |type, msg|%>
-      <div><%= msg%></div>
-    <%end%>
+      
+      <% flash.each do |type, msg|%>
+        <div><%= msg%></div>
+      <%end%>
+
       <article class="create-input-data">
         <h2>Edit Broker</h2>
 

@@ -1,11 +1,28 @@
+<section class="create-wrapper-body" style="height:50vh; margin-top:4em;">
+  <div class="create-wrapper">
+    <article class="create-input-data">
+      <h2>Broker Information</h2>
 
-<h1>Broker Information</h1>
-<div>
-    <div>Username: <%= @broker.username%></div>
-    <div>Email: <%= @broker.email%></div>
-    <div>First name: <%= @broker.first_name%></div>
-    <div>Last name: <%= @broker.last_name%></div>
-</div>
+      <div class="form-left-and-right">
+
+        <div class="form-left">
+          <div class="field">
+            <p>Username: </p><h3><%= @broker.username%></h3><br>
+            <p>First name: </p><h3><%= @broker.first_name%></First>
+          </div>
+        </div>
+
+        <div class="form-right">   
+          <div class="field">
+            <p>Email: </p><h3><%= @broker.email%></h3><br>
+            <p>Last name: </p><h3><%= @broker.last_name%></h3>
+          </div>
+        </div>
+
+    </article>
+  </div>
+</section>
+
 <section class = 'table'>
     
     <table class = 'content-table'>
