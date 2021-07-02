@@ -1,26 +1,51 @@
-<h1>Create Broker</h1>
+<section class="create-wrapper-body">
+  <div class="create-wrapper">
 
-<%= form_with scope: :broker, url: admin_broker_path(current_admin, @broker), method: :patch do |f|%>
-<%flash.each do |type, msg|%>
-  <%= msg%>
-<%end%>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= form_with scope: :broker,  url: admin_broker_path(current_admin, @broker), method: :patch, local: true do |f|%>
+    <% flash.each do |type, msg|%>
+      <div><%= msg%></div>
+    <%end%>
+      <article class="create-input-data">
+        <h2>Edit Broker</h2>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation,  autocomplete: "current-password" %>
-  </div>
+        <div class="form-left-and-right">
+        
+          <div class="form-left">
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"create-admin-input" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :approved %><br />
-    <%= f.check_box :approved%>
-  </div>
+             <div class="field">
+              <%= f.label :username %><br />
+              <%= f.text_field :username, autofocus: true, autocomplete: "email", class:"create-admin-input" %>
+            </div>
+          </div>
   
-  <div class="actions">
-    <%= f.submit "Submit" %>
+          <div class="form-right">    
+            <div class="field">
+              <%= f.label :first_name %><br />
+              <%= f.text_field :first_name, autofocus: true, autocomplete: "email", class:"create-admin-input" %>
+            </div>
+    
+            <div class="field">
+              <%= f.label :last_name %><br />
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "email", class:"create-admin-input" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="approve-checkbox">
+          <%= f.check_box :approved %>
+          <%= f.label :approved %>
+        </div>
+        
+        <div class="field">
+          <%= f.submit "Update", class:"btn" %>
+        </div>
+
+      </article>
+    <%end%>
   </div>
-<%end%>
+</section>
 
