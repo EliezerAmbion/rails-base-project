@@ -112,6 +112,6 @@ Rails.application.configure do
 
   # Mailer for Devise in Heroku app
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'stockpile-eli-leif.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://stockpile-eli-leif.herokuapp.com' }
 
 end
