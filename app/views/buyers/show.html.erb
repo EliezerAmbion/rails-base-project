@@ -1,28 +1,51 @@
-<h1>Buyer Information</h1>
-<div>
-    <div>Username: <%= @buyer.username%></div>
-    <div>Email: <%= @buyer.email%></div>
-    <div>First name: <%= @buyer.first_name%></div>
-    <div>Last name: <%= @buyer.last_name%></div>
-</div>
-<section class = 'table'>
-    <table class = 'content-table'>
-    <caption>Stocks</caption>
-        <thead>
-            <tr>
-                <th>Symbol</th>
-                <th>Company Name</th>
-                <th>Quantity</th>
-            </tr>
-        </thead>
-        <tbody>
-        <% @buyer.buyer_stocks.each do |buyer_stock|%>
-            <tr>
-                <td><%= buyer_stock.symbol%></td>
-                <td><%= buyer_stock.company_name%></td>
-                <td><%= buyer_stock.quantity%></td>
-            </tr>
-        <%end%>
-        </tbody>
-    </table>
+<section class="create-wrapper-body" style="height:50vh; margin-top:4em;">
+  <div class="create-wrapper">
+    <article class="create-input-data">
+      <h2>Buyer Information</h2>
+
+      <div class="form-left-and-right">
+
+        <div class="form-left">
+          <div class="field">
+            <p>Username: </p><h3><%= @buyer.username%></h3><br />
+            <p>First name: </p><h3><%= @buyer.first_name%></h3>
+          </div>
+        </div>
+        
+        <div class="form-right">   
+          <div class="field">
+           <p>Email: <h3><%= @buyer.email%></h3><br />
+           <p>Last name: <h3><%= @buyer.last_name%></h3>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
 </section>
+
+<section class = 'table' style="margin-top:0">
+  <table class = 'content-table'>
+    <caption>Stocks</caption>
+
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Company Name</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @buyer.buyer_stocks.each do |buyer_stock|%>
+        <tr>
+          <td><%= buyer_stock.symbol%></td>
+          <td><%= buyer_stock.company_name%></td>
+          <td><%= buyer_stock.quantity%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</section>
+
+

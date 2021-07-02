@@ -26,7 +26,7 @@
       .logo-container {
         position: absolute;
         left: 0;
-        top: -22px;
+        top: -30px;
 
         .logo {
           @include flexCenter(row, center);
@@ -37,10 +37,8 @@
       h3 {
         color: var(--clr-accent-lighter);
         margin: 1em 0;
-        font-size: var(--fs-h3);
       }
       p {
-        font-size: var(--fs-body);
         margin-bottom: 4em;
         color: var(--clr-light);
       }

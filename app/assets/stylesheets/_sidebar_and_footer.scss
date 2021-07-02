@@ -10,19 +10,21 @@
   // display: none;
 
   .logo {
-    color: var(--clr-light);
     @include flexCenter(row, center);
-    margin-bottom: 4em;
-    padding: 3em 0 0 0;
+    margin-bottom: 3em;
+    padding: 2em 0 0 0;
+    color: var(--clr-light);
+    font-size: var(--fs-h3);
   }
 
   .nav_list {
-    height: 30%;
     @include flexCenter(column, flex-start);
     justify-content: space-evenly;
+    height: 35%;
 
     .list a {
       color: var(--clr-accent-lighter);
+      font-size: var(--fs-body);
     }
 
     .user_profile {

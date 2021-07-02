@@ -1,10 +1,20 @@
 <nav class = 'sidebar'>
   <div class="logo_content">
-    <div class="logo">
-      <i class='bx bxs-coin-stack'></i>
-      <h1>stockpile</h1>
-      <%# <i class='bx bx-menu'></i> %>
-    </div>
+    <% if buyer_signed_in? or broker_signed_in? %>
+      <%= link_to(root_path) do %>
+        <div class="logo">
+          <i class='bx bxs-coin-stack'></i>
+          <h3>stockpile</h3>
+        </div>
+      <% end %>
+
+    <% else %>
+      <div class="logo">
+        <i class='bx bxs-coin-stack'></i>
+        <h3>stockpile</h3>
+      </div>
+    <% end %>
+    
   </div>
 
   <ul class="nav_list">

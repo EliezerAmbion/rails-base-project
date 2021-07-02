@@ -20,14 +20,14 @@
           <td><%= user.last_name%></td>
           <td><%= user.username%></td>
           <%if user.type == 'Broker'%>
-          <td>
-            <%= link_to 'Show', admin_broker_path(current_admin, user)%> | 
-            <%= link_to 'Edit', edit_admin_broker_path(current_admin, user)%>
-          </td>
+            <td>
+              <%= link_to 'Show', admin_broker_path(current_admin, user)%> | 
+              <%= link_to 'Edit', edit_admin_broker_path(current_admin, user)%>
+            </td>
           <%elsif user.type == 'Buyer'%>
-          <td>
-            <%= link_to 'Show', admin_buyer_path(current_admin, user)%>
-          </td>
+            <td>
+              <%= link_to 'Show', admin_buyer_path(current_admin, user)%>
+            </td>
           <%end%>
         </tr>
       <%end%>
