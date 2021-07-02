@@ -111,7 +111,17 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Mailer for Devise in Heroku app
+  config.action_mailer.default_url_options = { host: 'stockpile-eli-leif.herokuapp.com' }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'https://stockpile-eli-leif.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'stockpile-eli-leif.herokuapp.com',
+    user_name:            'eyepatch887711@gmail.com',
+    password:             'yixhbdclhnbbyqtj',
+    authentication:       'plain',
+    enable_starttls_auto: true 
+  }
 
 end
