@@ -1,9 +1,7 @@
 class AdminsController < ApplicationController
   before_action :redirect
   def index
-    @admins = Admin.all
-    @brokers = Broker.where(approved: true)
-    @buyers = Buyer.all
+    @users = User.where(approved: true)
   end
 
   def new

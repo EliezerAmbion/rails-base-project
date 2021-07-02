@@ -93,6 +93,13 @@
       <li class="list">
         <%= link_to "Pending Brokers", admin_brokers_path(current_admin)%>
       </li>
+
+      <li class="list">
+        <%= link_to user_transactions_path do %>
+          <span>Transactions</span>
+        <% end %>
+      </li>
+
       <li class="list">
         <%= link_to "Logout", logout_path(current_admin), method: :delete%>
       </li>

@@ -1,6 +1,6 @@
 <section class="admin-table">
   <table class="admin-content-table">
-    <Caption>All Buyers</Caption>
+    <Caption>All Users</Caption>
 
     <thead>
       <tr>
@@ -8,42 +8,22 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Username</th>
+        <th>Action</th>
       </tr>
     </thead>
 
     <tbody>
-      <% @buyers.each do |buyer|%>
+      <% @users.each do |user|%>
         <tr>
-          <td><%= buyer.email%></td>
-          <td><%= buyer.first_name%></td>
-          <td><%= buyer.last_name%></td>
-          <td><%= buyer.username%></td>
+          <td><%= user.email%></td>
+          <td><%= user.first_name%></td>
+          <td><%= user.last_name%></td>
+          <td><%= user.username%></td>
+          <%if user.type == 'Broker'%>
+          <td><%= link_to 'Edit', edit_admin_broker_path(current_admin, user)%></td>
+          <%end%>
         </tr>
       <%end%>
     </tbody>
   </table>
-
-  <table class="admin-content-table">
-    <Caption>All Brokers</Caption>
-
-    <thead>
-      <th>Email</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </thead>
-
-    <tbody>
-      <% @brokers.each do |broker|%>
-        <tr>
-          <td><%= broker.email %></td>
-          <td><%= broker.first_name%></td>
-          <td><%= broker.last_name%></td>
-          <td><%= broker.username%></td>
-        </tr>
-      <%end%>
-    </tbody>
-
-  </table>
-
 </section>
