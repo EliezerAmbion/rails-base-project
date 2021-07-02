@@ -28,6 +28,34 @@
     -0.1em 0.125em 0.25em rgba(0, 0, 0, 0.1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
 @media (min-width: 650px) {
   :root {
     --fs-h1: 3.4rem;

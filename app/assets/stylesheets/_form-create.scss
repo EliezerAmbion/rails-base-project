@@ -2,11 +2,12 @@
 
 .create-wrapper-body {
   @include flexCenter(row, center);
+  width: calc(100% - 20rem);
   justify-content: center;
   height: 100vh;
+  margin-left: 16rem;
   font-family: mont;
   color: var(--clr-accent-darker);
-  margin-left: 10rem;
 
   .create-wrapper {
     border-radius: 0.4rem;
