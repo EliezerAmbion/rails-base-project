@@ -32,7 +32,7 @@ class BrokersController < ApplicationController
     if @broker.save
       redirect_to admins_path, notice: 'Successfully updated broker!'
     else
-      redirect_to :edit, @broker.errors.full_messages
+      redirect_to edit_admin_broker_path(current_admin, @broker), alert: @broker.errors.full_messages.first
     end
   end
 

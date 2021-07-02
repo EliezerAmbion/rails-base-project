@@ -1,7 +1,30 @@
-<h1><%= @broker.email%></h1>
-<h2>Stocks</h2>
-<% @broker.broker_stocks.each do |broker_stock|%>
-    <p><%=broker_stock.symbol %>| <%=broker_stock.company_name %></p>
-<%end%>
+
+<h1>Broker Information</h1>
+<div>
+    <div>Username: <%= @broker.username%></div>
+    <div>Email: <%= @broker.email%></div>
+    <div>First name: <%= @broker.first_name%></div>
+    <div>Last name: <%= @broker.last_name%></div>
+</div>
+<section class = 'table'>
+    
+    <table class = 'content-table'>
+    <caption>Stocks</caption>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @broker.broker_stocks.each do |broker_stock|%>
+            <tr>
+                <td><%= broker_stock.symbol%></td>
+                <td><%= broker_stock.company_name%></td>
+            </tr>
+        <%end%>
+        </tbody>
+    </table>
+</section>
 
 

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # post "/admins" => "admins#create"
   resources :admins, only: %i[index new create] do 
     resources :brokers
+    resources :buyers, only: :show
   end
 
   get "/admins/sign_in" => "admin_sessions#new"
