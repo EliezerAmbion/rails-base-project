@@ -1,0 +1,28 @@
+<h1>Buyer Information</h1>
+<div>
+    <div>Username: <%= @buyer.username%></div>
+    <div>Email: <%= @buyer.email%></div>
+    <div>First name: <%= @buyer.first_name%></div>
+    <div>Last name: <%= @buyer.last_name%></div>
+</div>
+<section class = 'table'>
+    <table class = 'content-table'>
+    <caption>Stocks</caption>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @buyer.buyer_stocks.each do |buyer_stock|%>
+            <tr>
+                <td><%= buyer_stock.symbol%></td>
+                <td><%= buyer_stock.company_name%></td>
+                <td><%= buyer_stock.quantity%></td>
+            </tr>
+        <%end%>
+        </tbody>
+    </table>
+</section>
