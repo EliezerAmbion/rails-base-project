@@ -1,14 +1,17 @@
 
 <section class="table">
   <table class="content-table">
-    <Caption>Stocks</Caption>
+    <Caption>
+    Stocks
 
-    <div class = search-bar>
-    <%= form_tag(new_broker_stock_path, method: "get") do%>
-      <%= text_field_tag(:search)%>
-      <%= submit_tag('Search')%>
-    <%end%>
-  </div>
+      <div class = search-bar>
+        <%= form_tag(new_broker_stock_path, method: "get") do%>
+          <%= text_field_tag(:search)%>
+          <%= submit_tag('Search')%>
+        <%end%>
+      </div>
+      
+    </Caption>
 
     <thead>
       <tr>

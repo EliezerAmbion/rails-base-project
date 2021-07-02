@@ -1,0 +1,15 @@
+@import 'base';
+
+.root-container {
+  width: 80%;
+  @include flexCenter(row, center);
+  justify-content: center;
+  margin-left: 16rem;
+
+  .top-section {
+    h2 {
+      margin-top: 2em;
+      font-size: var(--fs-h2);
+    }
+  }
+}

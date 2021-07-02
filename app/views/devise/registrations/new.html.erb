@@ -17,7 +17,7 @@
         </div>
 
         <div class="login-btn__left">
-          <%= render "devise/shared/links" %>
+          <%= link_to 'Login', new_buyer_session_path, class:"login-btn__left__linkto" %>
         </div>
 
         <div class="become-a-broker__left">
@@ -31,28 +31,27 @@
         </div>
 
         <div class="login-btn__left">
-          <%= render "devise/shared/links" %>
+          <%= link_to 'Login', new_broker_session_path, class:"login-btn__left__linkto" %>
         </div>
 
         <div class="become-a-broker__left">
           <%= link_to 'Login as Buyer', buyer_session_path, class:"become-a-broker__left-link-to"%>
         </div>
 
+<%# if button fails %>
       <% else %>
-
         <div>
           <h3>Already a member?</h3>
           <p>If you are a member, <br> please log in.</p>
         </div>
 
         <div class="login-btn__left">
-          <%= render "devise/shared/links" %>
+          <%= link_to 'Login', new_buyer_session_path, class:"login-btn__left__linkto" %>
         </div>
 
         <div class="become-a-broker__left">
           <%= link_to 'Become a Broker', new_broker_registration_path, class:"become-a-broker__left-link-to"%>
         </div>
-
 
       <% end %>
 
