@@ -111,6 +111,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Mailer for Devise in Heroku app
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'stockpile-eli-leif.herokuapp.com' }
 
 end
