@@ -23,7 +23,8 @@
       <%= render 'shared/nav_bar'%>
     <% end %>
     
-      <%= yield %>
+    <%= render "shared/flash_messages" %>
+    <%= yield %>
 
-    </body>
+  </body>
 </html>
