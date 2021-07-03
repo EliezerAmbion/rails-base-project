@@ -4,7 +4,6 @@
   @include flexCenter(row, center);
   justify-content: center;
   height: 100vh;
-  font-family: mont;
   color: var(--clr-accent-darker);
 
   .wrapper-grid {
@@ -90,7 +89,6 @@
 
       h2 {
         margin: 0.825em 0;
-        font-size: var(--fs-h2);
       }
 
       label {
@@ -156,7 +154,6 @@
       }
       h2 {
         margin: 0.825em 0;
-        font-size: var(--fs-h2);
         text-align: center;
       }
 
