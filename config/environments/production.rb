@@ -118,8 +118,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'stockpile-eli-leif.herokuapp.com',
-    user_name:            Rails.application.credentials.dig(:email, :address),
-    password:             Rails.application.credentials.dig(:email, :password),
+    user_name:            Rails.application.credentials.dig(:gmail, :address),
+    password:             Rails.application.credentials.dig(:gmail, :password),
     authentication:       'plain',
     enable_starttls_auto: true 
   }
